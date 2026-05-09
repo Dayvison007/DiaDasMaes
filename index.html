@@ -360,8 +360,8 @@
     }
 
     .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 90vw;
+      max-height: 90vh;
       border-radius: 16px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     }
@@ -464,12 +464,13 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="lightbox" id="lightbox">
-      <img src="" alt="Foto ampliada">
-    </div>
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Foto ampliada">
+  </div>
 
-    <script>
+  <script>
       function createHearts() {
         const container = document.getElementById('heartsContainer');
         const emojis = ['❤️', '💕', '💖', '🌸', '🌷', '✨'];
