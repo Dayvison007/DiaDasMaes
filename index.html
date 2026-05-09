@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Dia das Mães</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 25%, #f48fb1 50%, #f06292 75%, #ec407a 100%);
+      background-size: 400% 400%;
+      animation: gradient 12s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      max-width: 680px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 48px;
+      padding: 60px 48px 48px;
+      box-shadow:
+        0 30px 80px rgba(233, 30, 99, 0.15),
+        0 10px 30px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -60%;
+      left: -60%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 40%, rgba(244, 143, 177, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .flowers {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .flower {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .flower:nth-child(2) { animation-delay: 0.4s; }
+    .flower:nth-child(3) { animation-delay: 0.8s; }
+    .flower:nth-child(4) { animation-delay: 1.2s; }
+    .flower:nth-child(5) { animation-delay: 1.6s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .flower .petals {
+      font-size: 36px;
+      line-height: 1;
+      filter: drop-shadow(0 2px 8px rgba(233, 30, 99, 0.2));
+    }
+
+    .flower .stem {
+      width: 2px;
+      height: 24px;
+      background: linear-gradient(to top, #66bb6a, transparent);
+      border-radius: 1px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #4a001a;
+      margin-bottom: 8px;
+      line-height: 1.2;
+      position: relative;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(135deg, #e91e63, #f06292);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #880e4f;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #f06292, transparent);
+      margin: 0 auto 32px;
+      border-radius: 2px;
+    }
+
+    .message {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: #3e0020;
+      margin-bottom: 36px;
+      position: relative;
+    }
+
+    .message p {
+      margin-bottom: 16px;
+    }
+
+    .message .heart {
+      display: inline-block;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    .hearts-bg {
+      position: absolute;
+      font-size: 14px;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    .signature {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: #880e4f;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 100px;
+      background: linear-gradient(135deg, #e91e63, #f06292);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 32px rgba(233, 30, 99, 0.4);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .hearts-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart-particle {
+      position: absolute;
+      bottom: -40px;
+      font-size: 20px;
+      opacity: 0;
+      animation: rise 8s linear infinite;
+    }
+
+    @keyframes rise {
+      0% {
+        opacity: 0;
+        transform: translateY(0) rotate(0deg) scale(0.5);
+      }
+      10% {
+        opacity: 0.6;
+      }
+      90% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100vh) rotate(720deg) scale(1.2);
+      }
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 24px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 24px;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .hidden-message.show {
+      display: block;
+    }
+
+    .hidden-message p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #4a001a;
+    }
+
+    .gallery {
+      margin-top: 40px;
+    }
+
+    .gallery-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #880e4f;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(233, 30, 99, 0.12);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 28px rgba(233, 30, 99, 0.2);
+    }
+
+    .gallery-grid img.full-width {
+      grid-column: 1 / -1;
+      aspect-ratio: 16 / 9;
+    }
+
+    body.lightbox-open {
+      overflow: hidden;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 20px;
+    }
+
+    .lightbox.show {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 0.3s ease;
+    }
+
+    @media (max-width: 500px) {
+      .card { padding: 36px 24px 32px; }
+      h1 { font-size: 2rem; }
+      .message { font-size: 1.05rem; }
+      .flower .petals { font-size: 28px; }
+      .gallery-grid { gap: 8px; }
+      .gallery-grid img { border-radius: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts-container" id="heartsContainer"></div>
+
+  <div class="card">
+    <div class="flowers">
+      <span class="flower"><span class="petals">🌸</span><span class="stem"></span></span>
+      <span class="flower"><span class="petals">🌷</span><span class="stem"></span></span>
+      <span class="flower"><span class="petals">🌹</span><span class="stem"></span></span>
+      <span class="flower"><span class="petals">🌷</span><span class="stem"></span></span>
+      <span class="flower"><span class="petals">🌸</span><span class="stem"></span></span>
+    </div>
+
+    <div class="subtitle">🌸❤️🌸</div>
+
+    <h1>Feliz <span class="highlight">Dia das Mães</span></h1>
+
+    <div class="divider"></div>
+
+    <div class="message">
+      <p>
+        Ver você ser mãe da nossa filha é o presente mais lindo que a vida me deu.
+        Cada sorriso que ela dá é um reflexo do amor que você planta todos os dias.
+      </p>
+      <p>
+        Hoje celebramos a mãe incrível que você é.
+      </p>
+    </div>
+
+    <div class="signature">— Com amor, hoje e sempre</div>
+
+    <button class="btn" id="revealBtn">
+      <span>Abrir carta</span>
+      <span>✉️</span>
+    </button>
+
+    <div class="hidden-message" id="hiddenMessage">
+      <p>
+        Para a melhor mãe que nossa filha poderia ter ❤️<br><br>
+        Todos os dias eu vejo você se dedicar de corpo e alma à nossa filha,
+        e meu coração transborda de gratidão.<br><br>
+        Você é a mãe que toda criança merecia ter — paciente, forte, doce
+        e presente. Nossa filha tem a sorte de ter você como mãe.<br><br>
+        Obrigado por cada noite sem dormir, por cada brinquedo guardado,
+        por cada beijo dado, por cada história contada. Você faz tudo
+        parecer mágico.<br><br>
+        Nós te amamos. ❤️<br><br>
+        Com todo o carinho,<br>
+        Eu & sua filha 💕
+      </p>
+      <div class="gallery">
+        <div class="gallery-title">📸 Momentos</div>
+        <div class="gallery-grid">
+          <img src="Imagens/9738f0ef-ded3-49df-8518-ec0374d482c7.png" alt="Momentos especiais" loading="lazy">
+          <img src="Imagens/SaveClip.App_523912285_17907036522196791_2701092405385434015_n.jpg" alt="Momentos especiais" loading="lazy">
+          <img src="Imagens/SaveClip.App_545254536_1478941096640611_471347233919226754_n.jpg" alt="Momentos especiais" loading="lazy">
+          <img src="Imagens/SaveClip.App_550767761_775703928403983_4046528546902805391_n.jpg" alt="Momentos especiais" loading="lazy">
+          <img src="Imagens/SaveClip.App_563418456_17916204165196791_9079251976189055300_n.jpg" alt="Momentos especiais" loading="lazy">
+          <img src="Imagens/SaveClip.App_565542857_1650066812636183_8383439050191084098_n.jpg" alt="Momentos especiais" loading="lazy">
+          <img src="Imagens/SaveClip.App_673782194_987214177209959_7325122997220336563_n.jpg" alt="Momentos especiais" loading="lazy">
+          <img src="Imagens/WhatsApp Image 2026-05-09 at 00.16.10.jpeg" alt="Momentos especiais" loading="lazy">
+          <img src="Imagens/nos.jpeg" alt="Nós três" class="full-width" loading="lazy">
+        </div>
+      </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Foto ampliada">
+  </div>
+
+  <script>
+    function createHearts() {
+      const container = document.getElementById('heartsContainer');
+      const emojis = ['❤️', '💕', '💖', '🌸', '🌷', '✨'];
+      for (let i = 0; i < 20; i++) {
+        const el = document.createElement('span');
+        el.className = 'heart-particle';
+        el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        el.style.left = Math.random() * 100 + '%';
+        el.style.fontSize = (14 + Math.random() * 18) + 'px';
+        el.style.animationDuration = (6 + Math.random() * 6) + 's';
+        el.style.animationDelay = (Math.random() * 8) + 's';
+        container.appendChild(el);
+      }
+    }
+    createHearts();
+
+    document.getElementById('revealBtn').addEventListener('click', function () {
+      const msg = document.getElementById('hiddenMessage');
+      msg.classList.toggle('show');
+      this.textContent = msg.classList.contains('show') ? 'Fechar carta 📕' : 'Abrir carta ✉️';
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('show');
+      document.body.classList.add('lightbox-open');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('show');
+      document.body.classList.remove('lightbox-open');
+    }
+
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.src));
+    });
+    lightbox.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
