@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feliz Dia das Mães</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       min-height: 100vh;
@@ -23,9 +30,17 @@
     }
 
     @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     .card {
@@ -46,8 +61,15 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .card::before {
@@ -75,14 +97,32 @@
       animation: float 3s ease-in-out infinite;
     }
 
-    .flower:nth-child(2) { animation-delay: 0.4s; }
-    .flower:nth-child(3) { animation-delay: 0.8s; }
-    .flower:nth-child(4) { animation-delay: 1.2s; }
-    .flower:nth-child(5) { animation-delay: 1.6s; }
+    .flower:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .flower:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+
+    .flower:nth-child(4) {
+      animation-delay: 1.2s;
+    }
+
+    .flower:nth-child(5) {
+      animation-delay: 1.6s;
+    }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     .flower .petals {
@@ -151,8 +191,15 @@
     }
 
     @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.15); }
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
     }
 
     .hearts-bg {
@@ -220,12 +267,15 @@
         opacity: 0;
         transform: translateY(0) rotate(0deg) scale(0.5);
       }
+
       10% {
         opacity: 0.6;
       }
+
       90% {
         opacity: 0.6;
       }
+
       100% {
         opacity: 0;
         transform: translateY(-100vh) rotate(720deg) scale(1.2);
@@ -322,15 +372,33 @@
     }
 
     @media (max-width: 500px) {
-      .card { padding: 36px 24px 32px; }
-      h1 { font-size: 2rem; }
-      .message { font-size: 1.05rem; }
-      .flower .petals { font-size: 28px; }
-      .gallery-grid { gap: 8px; }
-      .gallery-grid img { border-radius: 14px; }
+      .card {
+        padding: 36px 24px 32px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .message {
+        font-size: 1.05rem;
+      }
+
+      .flower .petals {
+        font-size: 28px;
+      }
+
+      .gallery-grid {
+        gap: 8px;
+      }
+
+      .gallery-grid img {
+        border-radius: 14px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="hearts-container" id="heartsContainer"></div>
 
@@ -371,7 +439,7 @@
         Para a melhor mãe que nossa filha poderia ter ❤️<br><br>
         Todos os dias eu vejo você se dedicar de corpo e alma à nossa filha,
         e meu coração transborda de gratidão.<br><br>
-        Você é a mãe que toda criança merecia ter — paciente, forte, doce
+        Você é a mãe que toda criança merecia ter paciente, forte, doce
         e presente. Nossa filha tem a sorte de ter você como mãe.<br><br>
         Obrigado por cada noite sem dormir, por cada brinquedo guardado,
         por cada beijo dado, por cada história contada. Você faz tudo
@@ -384,65 +452,72 @@
         <div class="gallery-title">📸 Momentos</div>
         <div class="gallery-grid">
           <img src="Imagens/9738f0ef-ded3-49df-8518-ec0374d482c7.png" alt="Momentos especiais" loading="lazy">
-          <img src="Imagens/SaveClip.App_523912285_17907036522196791_2701092405385434015_n.jpg" alt="Momentos especiais" loading="lazy">
-          <img src="Imagens/SaveClip.App_545254536_1478941096640611_471347233919226754_n.jpg" alt="Momentos especiais" loading="lazy">
-          <img src="Imagens/SaveClip.App_550767761_775703928403983_4046528546902805391_n.jpg" alt="Momentos especiais" loading="lazy">
-          <img src="Imagens/SaveClip.App_563418456_17916204165196791_9079251976189055300_n.jpg" alt="Momentos especiais" loading="lazy">
-          <img src="Imagens/SaveClip.App_565542857_1650066812636183_8383439050191084098_n.jpg" alt="Momentos especiais" loading="lazy">
-          <img src="Imagens/SaveClip.App_673782194_987214177209959_7325122997220336563_n.jpg" alt="Momentos especiais" loading="lazy">
+          <img src="Imagens/SaveClip.App_523912285_17907036522196791_2701092405385434015_n.jpg" alt="Momentos especiais"
+            loading="lazy">
+          <img src="Imagens/SaveClip.App_545254536_1478941096640611_471347233919226754_n.jpg" alt="Momentos especiais"
+            loading="lazy">
+          <img src="Imagens/SaveClip.App_550767761_775703928403983_4046528546902805391_n.jpg" alt="Momentos especiais"
+            loading="lazy">
+          <img src="Imagens/SaveClip.App_563418456_17916204165196791_9079251976189055300_n.jpg" alt="Momentos especiais"
+            loading="lazy">
+          <img src="Imagens/SaveClip.App_565542857_1650066812636183_8383439050191084098_n.jpg" alt="Momentos especiais"
+            loading="lazy">
+          <img src="Imagens/SaveClip.App_673782194_987214177209959_7325122997220336563_n.jpg" alt="Momentos especiais"
+            loading="lazy">
           <img src="Imagens/WhatsApp Image 2026-05-09 at 00.16.10.jpeg" alt="Momentos especiais" loading="lazy">
           <img src="Imagens/nos.jpeg" alt="Nós três" class="full-width" loading="lazy">
         </div>
       </div>
-  </div>
+    </div>
 
-  <div class="lightbox" id="lightbox">
-    <img src="" alt="Foto ampliada">
-  </div>
+    <div class="lightbox" id="lightbox">
+      <img src="" alt="Foto ampliada">
+    </div>
 
-  <script>
-    function createHearts() {
-      const container = document.getElementById('heartsContainer');
-      const emojis = ['❤️', '💕', '💖', '🌸', '🌷', '✨'];
-      for (let i = 0; i < 20; i++) {
-        const el = document.createElement('span');
-        el.className = 'heart-particle';
-        el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        el.style.left = Math.random() * 100 + '%';
-        el.style.fontSize = (14 + Math.random() * 18) + 'px';
-        el.style.animationDuration = (6 + Math.random() * 6) + 's';
-        el.style.animationDelay = (Math.random() * 8) + 's';
-        container.appendChild(el);
+    <script>
+      function createHearts() {
+        const container = document.getElementById('heartsContainer');
+        const emojis = ['❤️', '💕', '💖', '🌸', '🌷', '✨'];
+        for (let i = 0; i < 20; i++) {
+          const el = document.createElement('span');
+          el.className = 'heart-particle';
+          el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+          el.style.left = Math.random() * 100 + '%';
+          el.style.fontSize = (14 + Math.random() * 18) + 'px';
+          el.style.animationDuration = (6 + Math.random() * 6) + 's';
+          el.style.animationDelay = (Math.random() * 8) + 's';
+          container.appendChild(el);
+        }
       }
-    }
-    createHearts();
+      createHearts();
 
-    document.getElementById('revealBtn').addEventListener('click', function () {
-      const msg = document.getElementById('hiddenMessage');
-      msg.classList.toggle('show');
-      this.textContent = msg.classList.contains('show') ? 'Fechar carta 📕' : 'Abrir carta ✉️';
-    });
+      document.getElementById('revealBtn').addEventListener('click', function () {
+        const msg = document.getElementById('hiddenMessage');
+        msg.classList.toggle('show');
+        this.textContent = msg.classList.contains('show') ? 'Fechar carta 📕' : 'Abrir carta ✉️';
+      });
 
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    function openLightbox(src) {
-      lightboxImg.src = src;
-      lightbox.classList.add('show');
-      document.body.classList.add('lightbox-open');
-    }
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+      function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('show');
+        document.body.classList.add('lightbox-open');
+      }
 
-    function closeLightbox() {
-      lightbox.classList.remove('show');
-      document.body.classList.remove('lightbox-open');
-    }
+      function closeLightbox() {
+        lightbox.classList.remove('show');
+        document.body.classList.remove('lightbox-open');
+      }
 
-    document.querySelectorAll('.gallery-grid img').forEach(img => {
-      img.addEventListener('click', () => openLightbox(img.src));
-    });
-    lightbox.addEventListener('click', closeLightbox);
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox();
-    });
-  </script>
+      document.querySelectorAll('.gallery-grid img').forEach(img => {
+        img.addEventListener('click', () => openLightbox(img.src));
+      });
+      lightbox.addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    </script>
 </body>
+
 </html>
